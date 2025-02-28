@@ -17,6 +17,9 @@ require("./config/database").connect();
 const user = require('./routes/user');
 app.use('/api/v1', user);
 
+app.get("/praveer", (req, res) => {
+    res.send("Love from Riya!");
+})
 //activate server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
